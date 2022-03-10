@@ -11,7 +11,7 @@ import SwitchBar from "./SwitchBar.vue";
     <header>
         <div id="logo">
             <a href="../../../index.html">
-                <img src="@/assets/Logo Main.png" alt="">
+                <img src="@/assets/Logo_main.png" alt="">
             </a>
         </div>
         <the-nav/>
