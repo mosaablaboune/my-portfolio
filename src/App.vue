@@ -1,18 +1,26 @@
 <script setup>
+import { ref, watch } from 'vue';
+import TheHeader from './components/TheHeader/TheHeader.vue';
+
+
+
 
 </script>
 
 <template>
-
+  <TheHeader/>
+  <router-view/>
 </template>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #091F29;
+  background-image: url(src/assets/BG-.png);
+  background-position: center center;
+  background-size: 85rem;
+  font-family: ibm-plex-arabic, sans-serif;
 }
 </style>
