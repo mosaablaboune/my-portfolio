@@ -20,10 +20,7 @@ import Footer from './components/Footer.vue';
   padding: 0;
   background-attachment: fixed;
   height: 100vh;
-  background-color: #091F29;
-  background-image: url(src/assets/code_bg.png);
-  background-position: center center;
-  background-size: 85rem;
+
   font-family: ibm-plex-arabic, sans-serif;
   display: flex;
   flex-direction: column;
