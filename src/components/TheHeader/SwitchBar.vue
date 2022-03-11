@@ -24,7 +24,7 @@
 .switch {
     display: flex;
     flex-direction: row;
-    margin-top: .6rem;
+    align-items: center;
 }
 
 .lang button {
@@ -33,10 +33,10 @@
     font-size: 1.2rem;
     font-weight: 400;
     background-color: #2b9ccc;
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
-    line-height: 1;
+    line-height: 0;
     margin-right: 1.2rem;
 }
 
@@ -48,8 +48,6 @@ button {
 }
 
 .mode button svg{
-    stroke: #d4ecf6;
-    font-size: 1.2rem;
-    
+    color: #d4ecf6;
 }
 </style>

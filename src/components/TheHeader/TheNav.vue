@@ -32,6 +32,7 @@ nav ul {
 }
 nav ul li {
     padding: 0 1.6rem;
+    
 }
 nav ul li a {
     text-decoration: none;
@@ -40,17 +41,31 @@ nav ul li a {
     font-family: 'Cascadia Code', sans-serif;
     font-weight: 450;
     font-size: 1.34rem;
-    transition: color, border-bottom cubic-bezier(.25, 1, .30, 1) .25s;
+    transition: color ease .35s;
+    position: relative;
 }
-nav ul li a::before {
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    position: absolute;
+    height: 9px;
+    top: 90%;
+    transition: all 0.35s ease;
+    left: 0;
     background-color: #2b9ccc;
-    height: 0.8rem;
-    left: 1rem;
-    top: 1rem;
-    width: 2rem;
 }
-nav ul li a:hover, 
+
+nav ul li a:hover::after, 
+.active::after{
+    width: 100%;
+    
+}
+
+nav ul li a:hover,
 .active {
     color: #2b9ccc;
 }
+
+
 </style>
