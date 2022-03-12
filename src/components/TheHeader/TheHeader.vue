@@ -11,7 +11,7 @@ import SwitchBar from "./SwitchBar.vue";
     <header>
         <div id="logo">
             <router-link to="/" >
-                <img src="@/assets/Logo_main.png" alt="">
+                <img src="@/assets/Logo_main.svg" alt="">
             </router-link>
         </div>
         <the-nav/>
@@ -31,6 +31,12 @@ header {
 }
 #logo img{
     max-width: 6.2rem;
+    transition: all .35s;
+}
+
+#logo img:hover {
+    transform: translateX(.2rem);
+
 }
 
 </style>

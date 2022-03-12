@@ -22,7 +22,7 @@
 .switch {
     display: flex;
     flex-direction: row;
-    margin-top: 1rem;
+    margin-top: .6rem;
 }
 
 .lang {
@@ -31,7 +31,7 @@
 .lang button {
     color: #d4ecf6;
     font-family: 'IBM Plex Sans Arabic', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.45rem;
     font-weight: 500;
     background-color: #2b9ccc;
     width: 1.8rem;
@@ -39,13 +39,14 @@
     border-radius: 50%;
     line-height: 0;
     border: 2px solid transparent;
-    transition: all ease .25s;
-    padding: 0;
+    transition: all .35s;
+    padding: 0 0 .3rem;
 }
 
 .lang button:hover {
     background-color: transparent;
     color: #2b9ccc;
+    transform: translateX(.15rem);
 }
 
 button {
@@ -58,10 +59,10 @@ button {
 
 .mode button svg{
     color: #d4ecf6;
-
-    transition: color ease-in .3s;
+    transition: all .35s;
 }
 .mode button svg:hover {
     color: #2b9ccc;
+    transform: translateX(.15rem);
 }
 </style>

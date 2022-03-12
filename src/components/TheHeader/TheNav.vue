@@ -25,6 +25,9 @@
 </template>
 
 <style scoped>
+nav {
+    margin: 0;
+}
 nav ul {
     display: flex;
     flex-direction: row;
@@ -52,14 +55,15 @@ nav ul li a::after{
     height: 8px;
     top: 90%;
     transition: all 0.35s ease;
-    left: 0;
+    right: 0;
     background-color: #2b9ccc;
 }
 
 nav ul li a:hover::after, 
 .active::after{
     width: 100%;
-    
+    right: auto;
+    left: 0;
 }
 
 

@@ -7,12 +7,9 @@
 <style scoped>
 footer {
     width: 1320px;
-    margin: 0 auto;
-    position: fixed;
-    right: 0;
-    left: 0;
-    bottom: .2rem;
+    margin: 0 auto .2rem;
 }
+
 
 p {
     font-family: 'Cascadia Code', sans-serif;
@@ -20,13 +17,14 @@ p {
     font-size: .85rem;
     color: #a1b4c4;
     text-align: left;
+    width: 100%;
 }
 a {
     color: #2b9ccc;
     text-decoration: none;
     font-weight: 700;
     position: relative;
-    transition: color ease-in-out .3s;
+    transition: color .35s;
 }
 a::after{
     content: '';
@@ -35,7 +33,7 @@ a::after{
     height: 3px;
     top: 90%;
     transition: all 0.35s ease;
-    left: 0;
+    right: 0;
     background-color: #2b9ccc;
 }
 a:hover {
@@ -44,5 +42,7 @@ a:hover {
 
 a:hover::after {
     width: 100%;
+    right: auto;
+    left: 0;
 }
 </style>
