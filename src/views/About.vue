@@ -11,7 +11,7 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
             <div class="photo-profile">
                 <div class="photo">
                     <div class="square"></div>
-                    <img src="../../public/Photo profile.png" alt="">
+                    <img src="@/assets/Photo-profile.png" alt="">
                 </div>
                 
                 <SocialButton direction="row" class="social"></SocialButton>
