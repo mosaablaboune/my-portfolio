@@ -49,7 +49,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     position: absolute;
-    height: 9px;
+    height: 8px;
     top: 90%;
     transition: all 0.35s ease;
     left: 0;
@@ -62,10 +62,6 @@ nav ul li a:hover::after,
     
 }
 
-nav ul li a:hover,
-.active {
-    color: #2b9ccc;
-}
 
 
 </style>

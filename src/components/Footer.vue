@@ -7,8 +7,11 @@
 <style scoped>
 footer {
     width: 1320px;
-    margin: 0 auto .8rem;
-    padding: 0;
+    margin: 0 auto;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: .2rem;
 }
 
 p {
@@ -23,16 +26,23 @@ a {
     text-decoration: none;
     font-weight: 700;
     position: relative;
+    transition: color ease-in-out .3s;
 }
-a::before {
-    position: absolute;
+a::after{
     content: '';
-    top: 0;
-    opacity: 0;
-    color: #d4ecf6;
-    transition: all .35 ease;
+    width: 0;
+    position: absolute;
+    height: 3px;
+    top: 90%;
+    transition: all 0.35s ease;
+    left: 0;
+    background-color: #2b9ccc;
 }
+a:hover {
+    color: #d4ecf6;
+}
+
 a:hover::after {
-    opacity: 1;
+    width: 100%;
 }
 </style>

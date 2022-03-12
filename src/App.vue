@@ -3,9 +3,6 @@ import { ref, watch } from 'vue';
 import TheHeader from './components/TheHeader/TheHeader.vue';
 import Footer from './components/Footer.vue';
 
-
-
-
 </script>
 
 <template>
@@ -18,9 +15,6 @@ import Footer from './components/Footer.vue';
 #app {
   margin: 0;
   padding: 0;
-  background-attachment: fixed;
-  height: 100vh;
-
   font-family: ibm-plex-arabic, sans-serif;
   display: flex;
   flex-direction: column;

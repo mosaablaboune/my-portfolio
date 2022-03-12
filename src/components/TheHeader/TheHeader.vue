@@ -10,9 +10,9 @@ import SwitchBar from "./SwitchBar.vue";
 <template>
     <header>
         <div id="logo">
-            <a href="../../../index.html">
+            <router-link to="/" >
                 <img src="@/assets/Logo_main.png" alt="">
-            </a>
+            </router-link>
         </div>
         <the-nav/>
         <switch-bar/>

@@ -34,7 +34,7 @@ button {
 button::after{
     position: absolute;
     width: 0;
-    transition: all 0.35s ease;
+    transition: all 0.35s ease-in-out;
 }
 
 .fill {
@@ -44,8 +44,9 @@ button::after{
     
 }
 .fill:hover {
-    background-color: #d4ecf6;
+    border-color: #2b9ccc;
     color: #2b9ccc;
+    background-color: transparent;
 }
 .stroke {
     background-color: transparent;
