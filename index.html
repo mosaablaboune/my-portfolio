@@ -18,12 +18,27 @@
       body {
         margin: 0;
         padding: 0;
-        font-size: 16px;
-        background-color: #091F29;
-        background-image: url(/public/code_bg.png);
-        background-position: center center;
-        background-attachment: fixed;
-        background-size: 85rem;
+      }
+      /* Works on Firefox */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #2b9ccc #fff;
+      }
+
+      /* Works on Chrome, Edge, and Safari */
+      * {
+        scroll-behavior: smooth;
+      }
+      *::-webkit-scrollbar {
+        width: .5rem;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: #2b9ccc;
       }
     </style>
   </head>

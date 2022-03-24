@@ -20,19 +20,19 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
                 <h5># About me</h5>
                 <h1>Who I am?</h1>
                 <p class="description">
-                    Hi 👋, good to see you again!,<br/>
-                    my name is Mosaab Laboune from Algeria,  I'm 20 years old. <br/>
-                    one day I buy a PC, and my friend ask me do you know 
+                    <span>>=</span>Hi 👋, good to see you again!,<br/>
+                    <span>>=</span>my name is Mosaab Laboune from Algeria,  I'm 20 years old. <br/>
+                    <span>>=</span>one day I buy a PC, and my friend ask me do you know 
                     programming?,<br/>
                     I said: No, He give me a course of HTML 
                     in USB, after I complete the course I do some research about programming in Google, 
                     and see myself intrested in web dev.<br/>
-                    so that's why I'm frontend developer, this  make me
+                    <span>>=</span>so that's why I'm frontend web developer, this  make me
                     build things on the Internet.<br/>
-                    I enjoy solve problem in coding challenges websites like: 
-                    <span>[Codewar, Hackerrank]</span>, and I do  carousel posts in social media 
+                    <span>>=</span>I enjoy solve problems in coding challenges websites like: 
+                    <span>{<a href="https://www.codewars.com/users/MosaabLaboune" target="_blank">Codewar</a>, <a href="https://www.hackerrank.com/mosaab_laboune" target="_blank">Hackerrank</a>}</span>, and I do  carousel posts in social media 
                     to help Arab people learn web dev.<br/>
-                    I'm careful to my religion much as I'm careful about myself.
+                    <span>>=</span>I'm careful to my religion much as I'm careful about myself.
                 </p>
                 <div class="cta">
                     <router-link :to="{ name: 'Contact'}">
@@ -126,15 +126,44 @@ h1 {
 }
 
 .description {
-    margin-top: 2.5rem;
+    margin-top: 3.2rem;
     margin-bottom: 0;
     width: 80%;
-    color: #a1b4c4;
+    color: var(--secondary-color);
     font-size: 1.45rem;
     font-weight: 400;
     line-height: 1.6;
 }
+.description span {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.description span a {
+    text-decoration: none;
+    transition: all .35s;
+    color: var(--main-color);
+    position: relative;
+}
 
+.description span a::after{
+    content: '';
+    width: 0;
+    position: absolute;
+    height: 4px;
+    top: 90%;
+    transition: all 0.35s ease;
+    right: 0;
+    background-color: var(--main-color);
+}
+.description span a:hover {
+    color: var(--primary-color);
+}
+
+.description span a:hover::after {
+    width: 100%;
+    right: auto;
+    left: 0;
+}
 .description span{
     color: #2b9ccc;
     font-weight: 600;
@@ -181,14 +210,14 @@ h1 {
     margin-top: 2.5rem;
 }
 .skills {
-    margin: 4rem 0;
+    margin: 4rem 0 5rem;
 }
 
 .techs {
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(5, 20%);
-    row-gap: 2rem;
+    row-gap: 4rem;
 }
 .skill {
     display: flex;
@@ -200,6 +229,8 @@ h1 {
     fill: #a1b4c4;
     transition: all .35s;
     width: 6rem;
+    height: 6rem;
+    cursor: pointer;
 }
 .skill svg:hover {
     fill: #2b9ccc;

@@ -16,7 +16,7 @@
             </router-link>
             <router-link :to="{ name: 'About'}">
                 <CtaButton type="stroke">
-                    More about me ->
+                    More about me <span>-></span>
                 </CtaButton>
             </router-link>
         </div>
@@ -35,7 +35,7 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
 <style scoped>
 .home {
     width: 1320px;
-    margin: 0 auto;
+    margin: 0 auto .2rem;
     flex-direction: row;
     display: flex;
     align-items: center;
@@ -65,23 +65,33 @@ h1 {
 }
 
 #name {
-    color: #2b9ccc;
+    color: var(--main-color);
     margin-top: 3.5rem;
     margin-left: -6px;
 }
 
 #build {
-    color: #a1b4c4;
+    position: relative;
+    color: var(--secondary-color);
     margin-top: 6rem;
+    animation: type;
+    border-right: 5px solid var(--secondary-color);
 }
-
+@keyframes type {
+    from{width: 0;}
+    to{width: 100%;}
+}
+@keyframes blink {
+    from, to {border-color: transparent}
+    50% {border-color: var(--main-color)}
+}
 /* The typewriter cursor effect */
 
 p {
     margin-top: 3.8rem;
     margin-bottom: 0;
     width: 72%;
-    color: #a1b4c4;
+    color: var(--secondary-color);
     font-size: 1.95rem;
     font-weight: 500;
     line-height: 1.4;

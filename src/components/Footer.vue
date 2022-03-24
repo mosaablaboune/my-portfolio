@@ -15,12 +15,12 @@ p {
     font-family: 'Cascadia Code', sans-serif;
     font-weight: 400;
     font-size: .85rem;
-    color: #a1b4c4;
+    color: var(--secondary-color);
     text-align: left;
     width: 100%;
 }
 a {
-    color: #2b9ccc;
+    color: var(--main-color);
     text-decoration: none;
     font-weight: 700;
     position: relative;
@@ -34,10 +34,10 @@ a::after{
     top: 90%;
     transition: all 0.35s ease;
     right: 0;
-    background-color: #2b9ccc;
+    background-color: var(--main-color);
 }
 a:hover {
-    color: #d4ecf6;
+    color: var(--primary-color);
 }
 
 a:hover::after {

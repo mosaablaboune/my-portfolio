@@ -31,36 +31,17 @@ button {
     transition: all .35s;
 }
 
-button::after {
-    content: '';
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100%;
-    position: absolute;
-    transition: all .35s;
-    z-index: -1;
-}
-button:hover::after{
-    right: auto;
-    left: 0;
-    width: 100%;
-}
-
 /* fill background */
 .fill {
     border: 3px solid transparent;
-    background-color: #2b9ccc;
-    color: #d4ecf6;
-}
-
-.fill::after{
-    border: 3px solid #2b9ccc;
+    background-color: var(--main-color);
+    color: var(--primary-color);
 }
 
 .fill:hover{
     background-color: transparent;
-    color: #2b9ccc;
+    color: var(--main-color);
+    border: 3px solid var(--main-color);
 }
 
 
@@ -68,17 +49,42 @@ button:hover::after{
 
 .stroke {
     background-color: transparent;
-    border: 3px solid #2b9ccc;
-    color: #2b9ccc;
+    border: 3px solid var(--main-color);
+    color: var(--main-color);
 }
 
 .stroke::after {
-    background-color: #2b9ccc;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    border: 3px solid transparent;
+    transition: all .35s;
+    background-color: var(--main-color);
+    transform-origin: top right;
 }
+
+.stroke span {
+    transition: all .35s;
+}
+
+.storke:hover span {
+    transform: translateX(.2rem);
+}
+
+
 
 .stroke:hover {
-    color: #d4ecf6;
+    border: 3px solid transparent;
+    color: var(--main-color);
 }
 
-
+.stroke:hover::after,
+.stroke:focus::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
 </style>

@@ -23,7 +23,7 @@ defineProps({
     direction: {
         type: String,
         default: 'column'
-    }
+    },
 })
 </script>
 
@@ -42,15 +42,18 @@ defineProps({
     margin-bottom: 1.2rem;
 }
 .row a{
-    margin-right: 1.2rem;
+    margin-right: 2rem;
 }
 .social a svg {
-    color: #a1b4c4;
+    color: var(--secondary-color);
     transition: all .35s;
 }
 
+.primary a svg {
+    color: var(--primary-color)
+}
 .social a svg:hover {
-    color: #2b9ccc;
+    color: var(--main-color);
     transform: translateX(.15rem);
 }
 </style>

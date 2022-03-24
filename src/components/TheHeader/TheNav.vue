@@ -39,7 +39,7 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    color: #d4ecf6;
+    color: var(--primary-color);
     padding-bottom: .45rem;
     font-family: 'Cascadia Code', sans-serif;
     font-weight: 450;
@@ -56,7 +56,7 @@ nav ul li a::after{
     top: 90%;
     transition: all 0.35s ease;
     right: 0;
-    background-color: #2b9ccc;
+    background-color: var(--main-color);
 }
 
 nav ul li a:hover::after, 
