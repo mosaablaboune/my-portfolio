@@ -20,6 +20,7 @@ import SwitchModeButton from '../Buttons/SwitchModeButton.vue';
     display: flex;
     flex-direction: row;
     margin-top: .6rem;
+    align-items: center;
 }
 
 .lang {
@@ -28,25 +29,22 @@ import SwitchModeButton from '../Buttons/SwitchModeButton.vue';
 .lang button {
     color: var(--primary-color);
     font-family: 'IBM Plex Sans Arabic', sans-serif;
-    font-size: 1.45rem;
-    font-weight: 500;
+    font-size: 1.6rem;
+    font-weight: 600;
     background-color: var(--main-color);
-    width: 1.8rem;
-    height: 1.8rem;
-    border-radius: 50%;
-    line-height: 0;
-    border: 2px solid transparent;
     transition: all .35s;
-    padding: 0 0 .3rem;
     outline: none;
-    border: none;
     cursor: pointer;
+    width: 2.2rem;
+    height: 2.2rem;
+    padding: 0;
+    line-height: 1;
+    margin: 0;
 }
 
 .lang button:hover {
     background-color: transparent;
     color: var(--main-color);
-    transform: translateX(.15rem);
 }
 
 </style>

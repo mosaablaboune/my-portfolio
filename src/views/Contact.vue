@@ -7,7 +7,7 @@ import Form from '@/components/Form/Form.vue';
 <template>
     <section class="contact">
         <main>
-            <h5># Contact Me</h5>
+            <h5># Contact me</h5>
             <h1>Get In Touch</h1>
         </main>
 
@@ -17,7 +17,7 @@ import Form from '@/components/Form/Form.vue';
             <Form/>
         </main>
         <main class="cntact-info">
-            <p class="cta">It's nice to work on your project and turn it on live. let's work togethere +</p>
+            <p class="cta">It's nice to work on your project and turn it on live. <span>let's work togethere <span class="plus">-></span></span></p>
             <div class="info">
                 <div class="detail">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
@@ -66,19 +66,15 @@ import Form from '@/components/Form/Form.vue';
 
 /* Contact Form */
 .contact-form {
-    display: flex;
-    flex-direction: column;
     margin: 0;
     padding: 0;
-    width: 45%;
 }
 
 .get-in-touch {
     display: flex;
     flex-direction: row;
     width: 1320px;
-    margin: 0 auto;
-    justify-content: space-between;
+    margin: 0 auto 2rem;
     align-items: center;
 }
 
@@ -86,18 +82,44 @@ import Form from '@/components/Form/Form.vue';
 .cntact-info {
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 0 0 0 10rem;
     padding: 0;
-    width: 40%;
 }
 .cntact-info p{
     color: var(--secondary-color);
-    font-size: 1.8rem;
+    font-size: 1.95rem;
     font-weight: 500;
-    margin: 0 0 1.8rem;
+    margin: 0 0 1rem;
 }
+
+.cta span{
+    color: var(--primary-color);
+    position: relative;
+    font-weight: 600;
+}
+
+.plus {
+    font-family: 'Cascadia Code', sans-serif;
+    display: inline-block;
+    font-weight: 700;
+    animation: speed 1s ease .5s infinite normal forwards;
+}
+
+@keyframes speed {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(.8rem) rotate(180deg);
+    }
+}
+.plus::after {
+    display: none;
+}
+
+
 .info {
-    margin: 0;
+    margin: 2.2rem 0;
     display: flex;
     flex-direction: column;
 }
@@ -117,18 +139,35 @@ import Form from '@/components/Form/Form.vue';
 
 .detail p {
     margin: 0 0 0 1.2rem;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
 .detail p a {
     color: var(--secondary-color);
     text-decoration: none;
-    transition: all .35s;
+    transition: color .35s;
     cursor: pointer;
+    position: relative;
 }
+.detail p a::after {
+    content: '';
+    width: 0;
+    position: absolute;
+    height: 5px;
+    top: 90%;
+    transition: all 0.35s ease;
+    right: 0;
+    background-color: var(--main-color);
+}
+.detail p a:hover::after {
+    width: 100%;
+    right: auto;
+    left: 0;
+}
+
 .detail p a:hover,
 .detail p a:focus {
-    color: var(--main-color);
+    color: var(--primary-color);
 }
 .primary a svg {
     color: var(--primary-color);

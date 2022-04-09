@@ -31,12 +31,12 @@ header {
 }
 #logo img{
     max-width: 6.2rem;
-    transition: all .35s;
+    transition: transform .35s;
 }
 
 #logo img:hover {
-    transform: translateX(.2rem);
-
+    transform: translateY(.8rem) scale(1.1) rotate(360deg);
 }
+
 
 </style>

@@ -22,69 +22,112 @@ defineProps({
 button {
     position: relative;
     outline: none;
-    border: none;
     cursor: pointer;
     padding: 1rem;
     font-family: 'Cascadia Code', sans-serif;
     font-weight: 500;
     font-size: 1.4rem;
     transition: all .35s;
+    border: 3px solid transparent;
 }
 
 /* fill background */
 .fill {
-    border: 3px solid transparent;
-    background-color: var(--main-color);
-    color: var(--primary-color);
-}
-
-.fill:hover{
     background-color: transparent;
-    color: var(--main-color);
+    color: var(--primary-color);
     border: 3px solid var(--main-color);
 }
 
+.fill:hover{
+    color: var(--main-color);
+}
+
+.fill:hover span {
+    display: inline-block;
+    transition: all .35s;
+    animation: scale 1s ease 0s infinite normal forwards;
+}
+
+.fill::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    background-color: var(--main-color);
+    top: -3px;
+    left: 0;
+    transition: all .35s;
+    z-index: -1;
+}
+
+.fill:hover::after {
+    width: 0;
+    left: auto;
+    right: -1px;
+    visibility: hidden;
+}
+
+@keyframes scale {
+    0% {
+        transform: sacle(0);
+    }
+    50% {
+        transform: sacle(.9);
+    }
+    100% {
+        transform: scale(1.8) rotate(180deg);
+    }
+}
 
 /* border stroke */
 
 .stroke {
+    position: relative;
     background-color: transparent;
-    border: 3px solid var(--main-color);
+    border-color: var(--main-color);
+    border-style: solid;
     color: var(--main-color);
+    z-index: 10;
+}
+
+.stroke:hover span {
+    display: inline-block;
+    transition: all .35s;
+    animation: speed 1s ease .5s infinite normal forwards;
+}
+
+@keyframes speed {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(.8rem);
+    }
 }
 
 .stroke::after {
     content: '';
-    top: 0;
-    right: 0;
+    position: absolute;
     width: 0;
     height: 100%;
-    position: absolute;
     border: 3px solid transparent;
-    transition: all .35s;
     background-color: var(--main-color);
-    transform-origin: top right;
-}
-
-.stroke span {
+    top: -3px;
+    right: 0;
     transition: all .35s;
+    visibility: hidden;
+    z-index: -1;
 }
 
-.storke:hover span {
-    transform: translateX(.2rem);
+.stroke:hover::after {
+    width: 99%;
+    left: 0;
+    right: auto;
+    visibility: visible;
 }
-
-
 
 .stroke:hover {
-    border: 3px solid transparent;
-    color: var(--main-color);
-}
-
-.stroke:hover::after,
-.stroke:focus::after {
-    right: auto;
-    left: 0;
-    width: 100%;
+    color: var(--primary-color);
 }
 </style>

@@ -7,33 +7,34 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
 
 <template>
     <section class="about">
-        <div class="about-detail">
+        <main class="main-about">
+            <h5># About me</h5>
+            <h1>Who I am?</h1>
+        </main>
+        <main class="about-details">
             <div class="photo-profile">
                 <div class="photo">
-                    <div class="square"></div>
                     <img src="@/assets/Photo-profile.png" alt="">
+                    <div class="square"></div>
                 </div>
-                
                 <SocialButton direction="row" class="social"></SocialButton>
             </div>
-            <main>
-                <h5># About me</h5>
-                <h1>Who I am?</h1>
-                <p class="description">
-                    <span>>=</span>Hi 👋, good to see you again!,<br/>
-                    <span>>=</span>my name is Mosaab Laboune from Algeria,  I'm 20 years old. <br/>
-                    <span>>=</span>one day I buy a PC, and my friend ask me do you know 
-                    programming?,<br/>
-                    I said: No, He give me a course of HTML 
+            <div class="bio">  
+                <div class="description">
+                    <p><span class="cmd">>=</span>Hi!, good to see you again!,</p>
+                    <p><span class="cmd">>=</span>my name is Mosaab Laboune from Algeria,  I'm 20 years old.</p>
+                    <p><span class="cmd">>=</span>one day I buy a PC, and my friend ask me do you know 
+                    programming?,</p>
+                    <p>I said: No, He give me a course of HTML 
                     in USB, after I complete the course I do some research about programming in Google, 
-                    and see myself intrested in web dev.<br/>
-                    <span>>=</span>so that's why I'm frontend web developer, this  make me
-                    build things on the Internet.<br/>
-                    <span>>=</span>I enjoy solve problems in coding challenges websites like: 
-                    <span>{<a href="https://www.codewars.com/users/MosaabLaboune" target="_blank">Codewar</a>, <a href="https://www.hackerrank.com/mosaab_laboune" target="_blank">Hackerrank</a>}</span>, and I do  carousel posts in social media 
-                    to help Arab people learn web dev.<br/>
-                    <span>>=</span>I'm careful to my religion much as I'm careful about myself.
-                </p>
+                    and see myself intrested in web dev.</p>
+                    <p><span class="cmd">>=</span>so that's why I'm frontend web developer, this  make me
+                    build things on the Internet.</p>
+                    <p><span class="cmd">>=</span>I enjoy solve problems in coding challenges websites like: 
+                    <span class="link">{ <a href="https://www.codewars.com/users/MosaabLaboune" target="_blank">Codewar</a>, <a href="https://www.hackerrank.com/mosaab_laboune" target="_blank">Hackerrank</a> }</span>, and I do  carousel posts in social media 
+                    to help Arab people learn web dev.</p>
+                    <p><span class="cmd">>=</span>I'm careful to my religion much as I'm careful about myself.</p>
+                </div>
                 <div class="cta">
                     <router-link :to="{ name: 'Contact'}">
                         <CtaButton>
@@ -42,47 +43,138 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
                     </router-link>
                     <router-link :to="{ name: 'Works'}">
                         <CtaButton type="stroke">
-                            See my works ->
+                            See my works <span>-></span> 
                         </CtaButton>
                     </router-link>
                 </div>
                 
-            </main>
-        </div>
-        <div class="skills">
-            <h1>Some Tecks I use:</h1>
+            </div>
+        </main>
+        <main class="skills">
+            <h1>My Tecks Skill:</h1>
             <div class="techs">
                 <div class="skill">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>
-                    <span>HTML</span>
+                    <div class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>
+                        <ul class="tooltip-detail">
+                            <li>{</li>
+                            <li>type: <span>'Markup Language'</span>,</li>
+                            <li>Skills:<span>'90%'</span></li>
+                            <li>}</li>
+                        </ul>
+                    </div>
+                    <p>HTML</p>
                 </div>
                 <div class="skill">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/></svg>
-                    <span>CSS</span>
+                    <div class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/></svg>
+                        <ul class="tooltip-detail">
+                            <li>{</li>
+                            <li>type: <span>'Styling Lang'</span>,</li>
+                            <li>Skills:<span>'80%'</span></li>
+                            <li>}</li>
+                        </ul>
+                    </div>
+                    <p>CSS</p>
                 </div>
                 <div class="skill">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>
-                    <span>Javascript</span>
+                    <div class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>
+                        <ul class="tooltip-detail">
+                            <li>{</li>
+                            <li>type: <span>'Programming Language'</span>,</li>
+                            <li>Skills:<span>'65%'</span></li>
+                            <li>}</li>
+                        </ul>
+                    </div>
+                    <p>Javascript</p>
                 </div>
                 <div class="skill">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M301.84 378.92c-.3.6-.6 1.08 0 0zm249.13-87a131.16 131.16 0 0 0-58 13.5c-5.9-11.9-12-22.3-13-30.1-1.2-9.1-2.5-14.5-1.1-25.3s7.7-26.1 7.6-27.2-1.4-6.6-14.3-6.7-24 2.5-25.29 5.9a122.83 122.83 0 0 0-5.3 19.1c-2.3 11.7-25.79 53.5-39.09 75.3-4.4-8.5-8.1-16-8.9-22-1.2-9.1-2.5-14.5-1.1-25.3s7.7-26.1 7.6-27.2-1.4-6.6-14.29-6.7-24 2.5-25.3 5.9-2.7 11.4-5.3 19.1-33.89 77.3-42.08 95.4c-4.2 9.2-7.8 16.6-10.4 21.6-.4.8-.7 1.3-.9 1.7.3-.5.5-1 .5-.8-2.2 4.3-3.5 6.7-3.5 6.7v.1c-1.7 3.2-3.6 6.1-4.5 6.1-.6 0-1.9-8.4.3-19.9 4.7-24.2 15.8-61.8 15.7-63.1-.1-.7 2.1-7.2-7.3-10.7-9.1-3.3-12.4 2.2-13.2 2.2s-1.4 2-1.4 2 10.1-42.4-19.39-42.4c-18.4 0-44 20.2-56.58 38.5-7.9 4.3-25 13.6-43 23.5-6.9 3.8-14 7.7-20.7 11.4-.5-.5-.9-1-1.4-1.5-35.79-38.2-101.87-65.2-99.07-116.5 1-18.7 7.5-67.8 127.07-127.4 98-48.8 176.35-35.4 189.84-5.6 19.4 42.5-41.89 121.6-143.66 133-38.79 4.3-59.18-10.7-64.28-16.3-5.3-5.9-6.1-6.2-8.1-5.1-3.3 1.8-1.2 7 0 10.1 3 7.9 15.5 21.9 36.79 28.9 18.7 6.1 64.18 9.5 119.17-11.8 61.78-23.8 109.87-90.1 95.77-145.6C386.52 18.32 293-.18 204.57 31.22c-52.69 18.7-109.67 48.1-150.66 86.4-48.69 45.6-56.48 85.3-53.28 101.9 11.39 58.9 92.57 97.3 125.06 125.7-1.6.9-3.1 1.7-4.5 2.5-16.29 8.1-78.18 40.5-93.67 74.7-17.5 38.8 2.9 66.6 16.29 70.4 41.79 11.6 84.58-9.3 107.57-43.6s20.2-79.1 9.6-99.5c-.1-.3-.3-.5-.4-.8 4.2-2.5 8.5-5 12.8-7.5 8.29-4.9 16.39-9.4 23.49-13.3-4 10.8-6.9 23.8-8.4 42.6-1.8 22 7.3 50.5 19.1 61.7 5.2 4.9 11.49 5 15.39 5 13.8 0 20-11.4 26.89-25 8.5-16.6 16-35.9 16-35.9s-9.4 52.2 16.3 52.2c9.39 0 18.79-12.1 23-18.3v.1s.2-.4.7-1.2c1-1.5 1.5-2.4 1.5-2.4v-.3c3.8-6.5 12.1-21.4 24.59-46 16.2-31.8 31.69-71.5 31.69-71.5a201.24 201.24 0 0 0 6.2 25.8c2.8 9.5 8.7 19.9 13.4 30-3.8 5.2-6.1 8.2-6.1 8.2a.31.31 0 0 0 .1.2c-3 4-6.4 8.3-9.9 12.5-12.79 15.2-28 32.6-30 37.6-2.4 5.9-1.8 10.3 2.8 13.7 3.4 2.6 9.4 3 15.69 2.5 11.5-.8 19.6-3.6 23.5-5.4a82.2 82.2 0 0 0 20.19-10.6c12.5-9.2 20.1-22.4 19.4-39.8-.4-9.6-3.5-19.2-7.3-28.2 1.1-1.6 2.3-3.3 3.4-5C434.8 301.72 450.1 270 450.1 270a201.24 201.24 0 0 0 6.2 25.8c2.4 8.1 7.09 17 11.39 25.7-18.59 15.1-30.09 32.6-34.09 44.1-7.4 21.3-1.6 30.9 9.3 33.1 4.9 1 11.9-1.3 17.1-3.5a79.46 79.46 0 0 0 21.59-11.1c12.5-9.2 24.59-22.1 23.79-39.6-.3-7.9-2.5-15.8-5.4-23.4 15.7-6.6 36.09-10.2 62.09-7.2 55.68 6.5 66.58 41.3 64.48 55.8s-13.8 22.6-17.7 25-5.1 3.3-4.8 5.1c.5 2.6 2.3 2.5 5.6 1.9 4.6-.8 29.19-11.8 30.29-38.7 1.6-34-31.09-71.4-89-71.1zm-429.18 144.7c-18.39 20.1-44.19 27.7-55.28 21.3C54.61 451 59.31 421.42 82 400c13.8-13 31.59-25 43.39-32.4 2.7-1.6 6.6-4 11.4-6.9.8-.5 1.2-.7 1.2-.7.9-.6 1.9-1.1 2.9-1.7 8.29 30.4.3 57.2-19.1 78.3zm134.36-91.4c-6.4 15.7-19.89 55.7-28.09 53.6-7-1.8-11.3-32.3-1.4-62.3 5-15.1 15.6-33.1 21.9-40.1 10.09-11.3 21.19-14.9 23.79-10.4 3.5 5.9-12.2 49.4-16.2 59.2zm111 53c-2.7 1.4-5.2 2.3-6.4 1.6-.9-.5 1.1-2.4 1.1-2.4s13.9-14.9 19.4-21.7c3.2-4 6.9-8.7 10.89-13.9 0 .5.1 1 .1 1.6-.13 17.9-17.32 30-25.12 34.8zm85.58-19.5c-2-1.4-1.7-6.1 5-20.7 2.6-5.7 8.59-15.3 19-24.5a36.18 36.18 0 0 1 1.9 10.8c-.1 22.5-16.2 30.9-25.89 34.4z"/></svg>
-                    <span>Sass</span>
+                    <div class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M301.84 378.92c-.3.6-.6 1.08 0 0zm249.13-87a131.16 131.16 0 0 0-58 13.5c-5.9-11.9-12-22.3-13-30.1-1.2-9.1-2.5-14.5-1.1-25.3s7.7-26.1 7.6-27.2-1.4-6.6-14.3-6.7-24 2.5-25.29 5.9a122.83 122.83 0 0 0-5.3 19.1c-2.3 11.7-25.79 53.5-39.09 75.3-4.4-8.5-8.1-16-8.9-22-1.2-9.1-2.5-14.5-1.1-25.3s7.7-26.1 7.6-27.2-1.4-6.6-14.29-6.7-24 2.5-25.3 5.9-2.7 11.4-5.3 19.1-33.89 77.3-42.08 95.4c-4.2 9.2-7.8 16.6-10.4 21.6-.4.8-.7 1.3-.9 1.7.3-.5.5-1 .5-.8-2.2 4.3-3.5 6.7-3.5 6.7v.1c-1.7 3.2-3.6 6.1-4.5 6.1-.6 0-1.9-8.4.3-19.9 4.7-24.2 15.8-61.8 15.7-63.1-.1-.7 2.1-7.2-7.3-10.7-9.1-3.3-12.4 2.2-13.2 2.2s-1.4 2-1.4 2 10.1-42.4-19.39-42.4c-18.4 0-44 20.2-56.58 38.5-7.9 4.3-25 13.6-43 23.5-6.9 3.8-14 7.7-20.7 11.4-.5-.5-.9-1-1.4-1.5-35.79-38.2-101.87-65.2-99.07-116.5 1-18.7 7.5-67.8 127.07-127.4 98-48.8 176.35-35.4 189.84-5.6 19.4 42.5-41.89 121.6-143.66 133-38.79 4.3-59.18-10.7-64.28-16.3-5.3-5.9-6.1-6.2-8.1-5.1-3.3 1.8-1.2 7 0 10.1 3 7.9 15.5 21.9 36.79 28.9 18.7 6.1 64.18 9.5 119.17-11.8 61.78-23.8 109.87-90.1 95.77-145.6C386.52 18.32 293-.18 204.57 31.22c-52.69 18.7-109.67 48.1-150.66 86.4-48.69 45.6-56.48 85.3-53.28 101.9 11.39 58.9 92.57 97.3 125.06 125.7-1.6.9-3.1 1.7-4.5 2.5-16.29 8.1-78.18 40.5-93.67 74.7-17.5 38.8 2.9 66.6 16.29 70.4 41.79 11.6 84.58-9.3 107.57-43.6s20.2-79.1 9.6-99.5c-.1-.3-.3-.5-.4-.8 4.2-2.5 8.5-5 12.8-7.5 8.29-4.9 16.39-9.4 23.49-13.3-4 10.8-6.9 23.8-8.4 42.6-1.8 22 7.3 50.5 19.1 61.7 5.2 4.9 11.49 5 15.39 5 13.8 0 20-11.4 26.89-25 8.5-16.6 16-35.9 16-35.9s-9.4 52.2 16.3 52.2c9.39 0 18.79-12.1 23-18.3v.1s.2-.4.7-1.2c1-1.5 1.5-2.4 1.5-2.4v-.3c3.8-6.5 12.1-21.4 24.59-46 16.2-31.8 31.69-71.5 31.69-71.5a201.24 201.24 0 0 0 6.2 25.8c2.8 9.5 8.7 19.9 13.4 30-3.8 5.2-6.1 8.2-6.1 8.2a.31.31 0 0 0 .1.2c-3 4-6.4 8.3-9.9 12.5-12.79 15.2-28 32.6-30 37.6-2.4 5.9-1.8 10.3 2.8 13.7 3.4 2.6 9.4 3 15.69 2.5 11.5-.8 19.6-3.6 23.5-5.4a82.2 82.2 0 0 0 20.19-10.6c12.5-9.2 20.1-22.4 19.4-39.8-.4-9.6-3.5-19.2-7.3-28.2 1.1-1.6 2.3-3.3 3.4-5C434.8 301.72 450.1 270 450.1 270a201.24 201.24 0 0 0 6.2 25.8c2.4 8.1 7.09 17 11.39 25.7-18.59 15.1-30.09 32.6-34.09 44.1-7.4 21.3-1.6 30.9 9.3 33.1 4.9 1 11.9-1.3 17.1-3.5a79.46 79.46 0 0 0 21.59-11.1c12.5-9.2 24.59-22.1 23.79-39.6-.3-7.9-2.5-15.8-5.4-23.4 15.7-6.6 36.09-10.2 62.09-7.2 55.68 6.5 66.58 41.3 64.48 55.8s-13.8 22.6-17.7 25-5.1 3.3-4.8 5.1c.5 2.6 2.3 2.5 5.6 1.9 4.6-.8 29.19-11.8 30.29-38.7 1.6-34-31.09-71.4-89-71.1zm-429.18 144.7c-18.39 20.1-44.19 27.7-55.28 21.3C54.61 451 59.31 421.42 82 400c13.8-13 31.59-25 43.39-32.4 2.7-1.6 6.6-4 11.4-6.9.8-.5 1.2-.7 1.2-.7.9-.6 1.9-1.1 2.9-1.7 8.29 30.4.3 57.2-19.1 78.3zm134.36-91.4c-6.4 15.7-19.89 55.7-28.09 53.6-7-1.8-11.3-32.3-1.4-62.3 5-15.1 15.6-33.1 21.9-40.1 10.09-11.3 21.19-14.9 23.79-10.4 3.5 5.9-12.2 49.4-16.2 59.2zm111 53c-2.7 1.4-5.2 2.3-6.4 1.6-.9-.5 1.1-2.4 1.1-2.4s13.9-14.9 19.4-21.7c3.2-4 6.9-8.7 10.89-13.9 0 .5.1 1 .1 1.6-.13 17.9-17.32 30-25.12 34.8zm85.58-19.5c-2-1.4-1.7-6.1 5-20.7 2.6-5.7 8.59-15.3 19-24.5a36.18 36.18 0 0 1 1.9 10.8c-.1 22.5-16.2 30.9-25.89 34.4z"/></svg>
+                        <ul class="tooltip-detail">
+                            <li>{</li>
+                            <li>type: <span>'CSS Preprocessor'</span>,</li>
+                            <li>Skills:<span>'70%'</span></li>
+                            <li>}</li>
+                        </ul>
+                    </div>
+                    <p>Sass</p>
                 </div>
                 <div class="skill">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M356.9 64.3H280l-56 88.6-48-88.6H0L224 448 448 64.3h-91.1zm-301.2 32h53.8L224 294.5 338.4 96.3h53.8L224 384.5 55.7 96.3z"/></svg>
-                    <span>Vue.js</span>
+                    <div class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M356.9 64.3H280l-56 88.6-48-88.6H0L224 448 448 64.3h-91.1zm-301.2 32h53.8L224 294.5 338.4 96.3h53.8L224 384.5 55.7 96.3z"/></svg>
+                        <ul class="tooltip-detail">
+                            <li>{</li>
+                            <li>type: <span>'Framework of Javascript'</span>,</li>
+                            <li>Skills:<span>'50%'</span></li>
+                            <li>}</li>
+                        </ul>
+                    </div>
+                    <p>Vue.js</p>
                 </div>
                 <div class="skill">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/></svg>
-                    <span>Python</span>
+                    <div class="tooltip" data-desc="{ Skills: '15%' }">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 256 172"><path d="M112.973 9.25c-7.172-12.333-25.104-12.333-32.277 0L2.524 143.66c-7.172 12.333 1.794 27.749 16.14 27.749h61.024c-6.13-5.357-8.4-14.625-3.76-22.576L135.13 47.348L112.973 9.25Z"></path><path  d="M162.505 38.733c5.936-10.09 20.776-10.09 26.712 0l64.694 109.971c5.936 10.091-1.484 22.705-13.357 22.705H111.167c-11.872 0-19.292-12.614-13.356-22.705l64.694-109.971Z"></path></svg>
+                        <ul class="tooltip-detail">
+                            <li>{</li>
+                            <li>type: <span>'Framework of Vue.js'</span>,</li>
+                            <li>Skills:<span>'15%'</span></li>
+                            <li>}</li>
+                        </ul>
+                    </div>
+                    <p>Nuxt.js</p>
                 </div>
                 <div class="skill">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
-                    <span>Git</span>
+                    <div class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/></svg>
+                        <ul class="tooltip-detail">
+                            <li>{</li>
+                            <li>type: <span>'Programming Language'</span>,</li>
+                            <li>Skills:<span>'70%'</span></li>
+                            <li>}</li>
+                        </ul>
+                    </div>
+                    <p>Python</p>
+                </div>
+                <div class="skill">
+                    <div class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24"><path  d="M11.146 0h3.924v18.166c-2.013.382-3.491.535-5.096.535c-4.791 0-7.288-2.166-7.288-6.32c0-4.002 2.65-6.6 6.753-6.6c.637 0 1.121.05 1.707.203zm0 9.143a3.894 3.894 0 0 0-1.325-.204c-1.988 0-3.134 1.223-3.134 3.365c0 2.09 1.096 3.236 3.109 3.236c.433 0 .79-.025 1.35-.102V9.142zM21.314 6.06v9.098c0 3.134-.229 4.638-.917 5.937c-.637 1.249-1.478 2.039-3.211 2.905l-3.644-1.733c1.733-.815 2.574-1.53 3.109-2.625c.561-1.121.739-2.421.739-5.835V6.059h3.924zM17.39.021h3.924v4.026H17.39z"></path></svg>        
+                        <ul class="tooltip-detail">
+                            <li>{</li>
+                            <li>type: <span>'Framework of Python'</span>,</li>
+                            <li>Skills:<span>'50%'</span></li>
+                            <li>}</li>
+                        </ul>
+                    </div>
+                    <p>Django</p>
+                </div>
+                <div class="skill">
+                    <div class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+                        <ul class="tooltip-detail">
+                            <li>{</li>
+                            <li>type: <span>'Version Control'</span>,</li>
+                            <li>Skills:<span>'60%'</span></li>
+                            <li>}</li>
+                        </ul>
+                    </div>
+                    <p>Git</p>
+                </div>
+                <div class="skill">
+                    <div class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 288"><path  fill-rule="evenodd" d="m152.576 32.963l59.146 34.15a25.819 25.819 0 0 1 5.818-4.604c12.266-7.052 27.912-2.865 35.037 9.402c7.052 12.267 2.865 27.912-9.402 35.037a25.698 25.698 0 0 1-6.831 2.72v68.325a25.7 25.7 0 0 1 6.758 2.702c12.34 7.125 16.527 22.771 9.402 35.038c-7.052 12.266-22.771 16.453-35.038 9.402a25.464 25.464 0 0 1-6.34-5.147l-58.786 33.94a25.671 25.671 0 0 1 1.295 8.08c0 14.103-11.458 25.636-25.635 25.636c-14.177 0-25.635-11.46-25.635-25.636c0-2.52.362-4.954 1.037-7.253l-59.13-34.14a25.824 25.824 0 0 1-5.738 4.52c-12.34 7.051-27.986 2.864-35.038-9.402c-7.051-12.267-2.864-27.913 9.402-35.038a25.71 25.71 0 0 1 6.758-2.703v-68.324a25.698 25.698 0 0 1-6.831-2.72C.558 99.897-3.629 84.178 3.423 71.911c7.052-12.267 22.77-16.454 35.037-9.402a25.82 25.82 0 0 1 5.79 4.575l59.163-34.159a25.707 25.707 0 0 1-1.048-7.29C102.365 11.46 113.823 0 128 0c14.177 0 25.635 11.459 25.635 25.635c0 2.548-.37 5.007-1.059 7.328Zm-6.162 10.522l59.287 34.23a25.599 25.599 0 0 0 2.437 19.831c3.609 6.278 9.488 10.44 16.013 12.062v68.41c-.333.081-.664.17-.993.264L145.725 44.17c.234-.224.464-.452.689-.684Zm-36.123.7l-77.432 134.11a25.824 25.824 0 0 0-1.01-.27v-68.417c6.525-1.622 12.404-5.784 16.013-12.062a25.6 25.6 0 0 0 2.427-19.869l59.27-34.22c.239.247.483.49.732.727Zm24.872 6.075l77.414 134.08a25.492 25.492 0 0 0-4.513 5.757a25.7 25.7 0 0 0-2.702 6.758H50.64a25.71 25.71 0 0 0-2.704-6.758a25.825 25.825 0 0 0-4.506-5.724l77.429-134.107A25.715 25.715 0 0 0 128 51.27c2.487 0 4.89-.352 7.163-1.01Zm11.795 194.478l58.902-34.008a25.865 25.865 0 0 1-.473-1.682H50.607a25.87 25.87 0 0 1-.266.992l59.19 34.175A25.558 25.558 0 0 1 128 236.373a25.564 25.564 0 0 1 18.958 8.365Z"></path></svg>
+                        <ul class="tooltip-detail">
+                            <li>{</li>
+                            <li>type: <span>'Query language API'</span>,</li>
+                            <li>Skills:<span>'5%'</span></li>
+                            <li>}</li>
+                        </ul>
+                    </div>
+                    <p>Graphql</p>
                 </div>
             </div>
-        </div>
-
+        </main>
     </section>
 </template>
 
@@ -95,19 +187,7 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
     display: flex;
 
 }
-.about-detail {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-
-}
-main {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-}
-h5 {
+.main-about h5 {
     font-family: 'Cascadia Code', sans-serif;
     font-weight: 600;
     font-size: 1.6rem;
@@ -116,7 +196,7 @@ h5 {
     margin-bottom: 0;
 }
 
-h1 {
+.main-about h1 {
     margin: 2.5rem 0 0;
     font-size: 3.5rem;
     font-weight: 700;
@@ -125,27 +205,55 @@ h1 {
     color: #d4ecf6;
 }
 
-.description {
-    margin-top: 3.2rem;
-    margin-bottom: 0;
-    width: 80%;
-    color: var(--secondary-color);
-    font-size: 1.45rem;
-    font-weight: 400;
-    line-height: 1.6;
+
+.about-details {
+    display: flex;
+    flex-direction: row-reverse;
+    
+
 }
-.description span {
-    color: var(--primary-color);
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+.description {
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+    width: 85%;
+
+}
+
+.description p {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 0;
+    overflow: hidden;
+    display: block;
+}
+
+.cmd {
+    font-family: 'Cascadia Code', sans-serif;
+    font-size: 1.6rem;
+    color: var(--main-color);
+    margin-right: .45rem;
+    font-weight: 500;
+}
+.description p span {
     font-weight: 600;
 }
-.description span a {
+.description p span a {
     text-decoration: none;
     transition: all .35s;
     color: var(--main-color);
     position: relative;
 }
 
-.description span a::after{
+.description p span a::after{
     content: '';
     width: 0;
     position: absolute;
@@ -155,21 +263,17 @@ h1 {
     right: 0;
     background-color: var(--main-color);
 }
-.description span a:hover {
+.description p span a:hover {
     color: var(--primary-color);
 }
 
-.description span a:hover::after {
+.description p span a:hover::after {
     width: 100%;
     right: auto;
     left: 0;
 }
-.description span{
-    color: #2b9ccc;
-    font-weight: 600;
-}
 .cta {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     margin-bottom: 0;
     display: flex;
     width: 45%;
@@ -178,7 +282,7 @@ h1 {
 }
 
 .photo-profile {
-    margin: 1.2rem 0 0;
+    margin: 2rem 0 0;
     display: flex;
     flex-direction: column;
     transition: all .35s;
@@ -187,60 +291,151 @@ h1 {
 .photo {
     position: relative;
     width: 100%;
-}
-.photo:hover .square {
-    transform: translate(0);
-}
-.photo .square{
-    position: absolute;
-    border: 3px solid #d4ecf6;
-    width: 90%;
-    height: 96%;
-    transform: translate(-0.8rem, 0.8rem);
-    z-index: -1;
-    transition: all .35s;
+    padding: 0;
+    margin: 0;
 }
 .photo img {
-    padding-top: 1.5rem;
-    background-color: #2b9ccc;
-    width: 20rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0;
+    background-color: var(--main-color);
+    width: 100%;
+    transition: all .35s;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+.photo img:hover {
+    background-color: var(--primary-color);
+    border-color: var(--main-color);
+}
+
+.photo .square{
+    position: absolute;
+    border: 3px solid var(--primary-color);
+    width: 100%;
+    height: 95%;
+    top: 0;
+    left: 0;
+    transform: translate(-0.8rem, .95rem);
+    transition: all .35s;
+    z-index: -1;
+}
+
+.photo:hover .square{
+    transform: translate(0);
+    border-color: var(--main-color);
 }
 
 .social {
-    margin-top: 2.5rem;
+    margin: 2.5rem 0 0;
 }
 .skills {
-    margin: 4rem 0 5rem;
+    margin: 2.5rem auto 3rem;
+    width: 1320px;
+}
+.skills h1 {
+    margin: 2.5rem 0 0;
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    line-height: 0;
+    color: var(--primary-color);
 }
 
 .techs {
     margin-top: 4rem;
     display: grid;
-    grid-template-columns: repeat(5, 20%);
-    row-gap: 4rem;
+    grid-template-columns: repeat(5, 18%);
+    gap: 1.5rem;
+    justify-content: space-between;
 }
 .skill {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    background-color: var(--background);
+    border: 2px solid var(--main-color);
+    padding: 1.2rem 1.2rem 0;
 }
-.skill svg {
-    fill: #a1b4c4;
+
+.tooltip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.tooltip svg {
+    fill: var(--secondary-color);
     transition: all .35s;
-    width: 6rem;
-    height: 6rem;
+    width: 8rem;
+    height: 8rem;
     cursor: pointer;
+    color: var(--secondary-color);
 }
-.skill svg:hover {
-    fill: #2b9ccc;
-    transform: translateX(.15rem);
+
+.tooltip:hover svg{
+    fill: var(--main-color);
+    transform: translateY(-0.15rem);
 }
-.skill span {
+.skill p {
     color: #d4ecf6;
     font-family: 'Cascadia Code', sans-serif;
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: 1.45rem;
     margin-top: 1.2rem;
 }
+
+
+
+.tooltip-detail {
+    position: absolute;
+    background-color: var(--background);
+    border: 2px solid var(--primary-color);
+    transition: all .35s;
+    top: 11rem;
+    z-index: 100;
+    padding: .8rem .6rem;
+    list-style: none;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: 'Cascadia Code', sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.tooltip li {
+    margin-left: 1.4rem;
+    margin-top: .8rem;
+    align-self: start;
+    color: var(--primary-color);
+}
+.tooltip li span {
+    color: var(--main-color);
+}
+.tooltip li:first-child,
+.tooltip li:last-child {
+    margin-left: 0;
+    margin-top: .2rem;
+}
+.tooltip-detail::before {
+    content: '';
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid var(--primary-color);
+    top: -1rem;
+    transition: all .25s;
+}
+
+.tooltip:hover .tooltip-detail {
+    bottom: auto;
+    width: 21rem;
+    display: flex;
+}
+
 </style>
+
+
+

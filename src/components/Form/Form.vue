@@ -1,27 +1,48 @@
 <script>
 import { useField } from 'vee-validate';
 import BaseInput from './BaseInput.vue';
+import { ref } from '@vue/reactivity';
+import emailjs from '@emailjs/browser';
+
 export default {
     methods: {
-        Submitted() {
-            console.log("submitted");
+        Submitted(val) {
+            console.log("the val is: " + val);
         }
     },
     components: { BaseInput }
 }
 </script>
 
+<script setup>
+
+const  emailInfo = ref({
+    name: null,
+    email: null,
+    subject: null,
+    message: null
+})
+
+
+function sendEmail(e) {
+    emailjs.sendForm('service_wyg5des', 'sendEmail', this.$refs.form, 'YOUR_USER_ID')
+        .then((result) => {
+            console.log('SUCCESS!', result.text);
+        }, (error) => {
+            console.log('FAILED...', error.text);
+        });
+}
+</script>
 
 <template>
-    <form class="form" @submit.prevent="Submitted">
-        <BaseInput id="name" label="Your name"/>
+    <form ref="form" class="form" @submit.prevent="sendEmail">
+        <BaseInput id="name" v-model="emailInfo.name" label="Your name"/>
         <div class="subject">
-            <BaseInput type="email" id="email" label="Your Email"/>
-            <BaseInput id="subject" label="Subject"/>
+            <BaseInput type="email" v-model="emailInfo.email" id="email" label="Your Email"/>
+            <BaseInput id="subject" v-model="emailInfo.subject" label="Subject"/>
         </div>
         
-        <textarea id="message" placeholder="Your message" rows="8">
-            Your message
+        <textarea id="message" v-model="emailInfo.message" placeholder="Your message" rows="7">
         </textarea>
         <button type="submit">Submit</button>
     </form>
@@ -35,49 +56,40 @@ export default {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    font-family: 'Cascadia Code', sans-serif;
-
 }
 
 .form .field,
 .form textarea {
     border: 3px solid var(--primary-color);
-    background: none;
+    background-color: var(--background);
     text-align: left;
     color: var(--primary-color);
     outline: none;
     padding: 1rem;
     font-size: 1.2rem;
-    margin: 0;
+    margin: 0 0 1rem;
+    font-family: 'Cascadia Code', sans-serif;
 }
 
-input:focus, textarea:focus {
+.form .field:focus, .form textarea:focus {
     color: var(--main-color);
-    border: 3px solid var(--main-color);
+    border-color: var(--main-color);
     font-family: 'Cascadia Code', sans-serif;
-    font-weight: 500;
-    font-size: 1.2rem;
-    padding: 1rem;
-    text-align: left;
+    transition: all .35s;
 }
 
-.form input::placeholder {
-    text-align: left;
+.form .field::placeholder,
+.form textarea::placeholder {
     color: var(--primary-color);
-    font-family: 'Cascadia Code', sans-serif;
-    font-weight: 500;
-    font-size: 1.2rem;
 }
-
 
 .subject {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
     margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
 }
+
 .form button {
     background-color: var(--main-color);
     border: 3px solid transparent;
@@ -91,7 +103,7 @@ input:focus, textarea:focus {
 .form button:hover,
 .form button:focus {
     border-color: var(--main-color);
-    background: none;
+    background: transparent;
     color: var(--main-color);
 }
 

@@ -54,6 +54,6 @@ defineProps({
 }
 .social a svg:hover {
     color: var(--main-color);
-    transform: translateX(.15rem);
+    transform: translatey(-0.15rem);
 }
 </style>

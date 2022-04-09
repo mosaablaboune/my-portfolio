@@ -52,7 +52,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     position: absolute;
-    height: 8px;
+    height: 7px;
     top: 90%;
     transition: all 0.35s ease;
     right: 0;

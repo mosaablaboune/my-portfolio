@@ -189,42 +189,48 @@ h1 {
 }
 
 .card {
-    background-color: #091F29;
+    background-color: var(--background);
     padding: 1.8rem;
     border: 3px solid #2b9ccc;
     display: flex;
     flex-direction: column;
     position: relative;
     cursor: pointer;
+    transition: all .35s;
 }
+
+
 .card::after {
     content: '';
     position: absolute;
-    height: 100%;
-    right: 0;
     width: 0;
-    top: 0;
-    background-color: #2b9ccc;
+    height: 100%;
+    border: 3px solid transparent;
+    background-color: var(--main-color);
+    top: -3px;
+    right: 0;
     transition: all .35s;
     opacity: 0;
 }
+
 .card:hover::after {
-    right: auto;
+    width: 99%;
     left: 0;
-    width: 100%;
-    opacity: .3;
+    right: auto;
+    opacity: 1;
 }
+
 .card svg {
     width: 6rem;
     height: 6rem;
-    fill: #d4ecf6;
-    margin: 0;
+    fill: var(--primary-color);
+    margin: 0 0 0 -1rem;
     padding: 0;
     z-index: 1;
 }
 
 .card h3 {
-    color: #d4ecf6;
+    color: var(--primary-color);
     font-size: 1.8rem;
     font-weight: 700;
     margin: 0 0 0;
@@ -233,24 +239,39 @@ h1 {
 
 .card p {
     margin: .8rem 0 0;
-    color: #a1b4c4;
+    color: var(--secondary-color);
     font-size: 1.2rem;
     z-index: 1;
+    transition: color .35s;
 }
 
+
+.card:hover p {
+    color: var(--primary-color);
+}
 .info {
     color: #a1b4c4;
     font-size: 2rem;
     font-weight: 600;
-    margin-top: 2.8rem;
+    margin: 2.8rem 0 1.95rem;
 }
 
 .info a span {
     font-family: 'Cascadia Code', sans-serif;
-    transform: rotate(45deg);
-    opacity: 0;
+    display: inline-block;
+    visibility: hidden;
     transition: all .35s;
     color: #d4ecf6;
+    animation: speed 1s ease .5s infinite normal forwards;
+}
+
+@keyframes speed {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(.8rem) rotate(180deg);
+    }
 }
 
 .info a {
@@ -261,7 +282,7 @@ h1 {
 }
 
 .info a:hover span {
-    opacity: 1;
+    visibility: visible;
 }
 
 .info a::after{
