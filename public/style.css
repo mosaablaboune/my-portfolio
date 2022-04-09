@@ -20,7 +20,7 @@ body {
   height:100%;
   font-size: 16px;
   background-color: var(--background);
-  background-image: url('src/assets/code_bg.png');
+  background-image: url('code_bg.png');
   background-position: center center;
   background-attachment: fixed;
   background-size: 85rem;
