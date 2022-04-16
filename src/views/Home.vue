@@ -35,7 +35,7 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
 <style scoped>
 .home {
     width: 1320px;
-    margin: 0 auto .2rem;
+    margin: 0 auto;
     flex-direction: row;
     display: flex;
     align-items: center;
