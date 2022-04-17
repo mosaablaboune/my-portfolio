@@ -9,7 +9,7 @@ import Cursor from './components/Cursor.vue';
 </script>
 
 <template>
-  <Cursor/>
+  <!--<Cursor/>-->
   <TheHeader/>
   <router-view/>
   <Footer/>
@@ -26,7 +26,7 @@ import Cursor from './components/Cursor.vue';
 
 
 #app {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: ibm-plex-arabic, sans-serif;
   display: flex;
@@ -35,6 +35,7 @@ import Cursor from './components/Cursor.vue';
   /*animation: slide 6s linear infinite alternate;*/
   position: relative;
   height: 100%;
+  width: 1320px;
 }
 
 

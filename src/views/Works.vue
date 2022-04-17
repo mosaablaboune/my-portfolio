@@ -7,7 +7,7 @@ const works = ref(true)
 <template>
     <section class="works" v-if="!works">
         <main>
-            <h5># My Works</h5>
+            <h5>#My_Works</h5>
             <h1>This is what I built</h1>
             <div class="projects">
                 
@@ -21,7 +21,7 @@ const works = ref(true)
 
 <style scoped>
 .works {
-    width: 1320px;
+    width: 100%;
     margin: 0 auto;
     flex-direction: column;
     display: flex;

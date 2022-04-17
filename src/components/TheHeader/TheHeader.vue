@@ -1,7 +1,8 @@
 <script setup>
 
 import TheNav from "./TheNav.vue";
-import SwitchBar from "./SwitchBar.vue";
+import LangButton from "../Buttons/LangButton.vue";
+import SwitchModeButton from "../Buttons/SwitchModeButton.vue";
 
 
 
@@ -11,32 +12,44 @@ import SwitchBar from "./SwitchBar.vue";
     <header>
         <div id="logo">
             <router-link to="/" >
-                <img src="@/assets/Logo_main.svg" alt="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315.37 88.89"><defs></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M315.37,44.52a15.57,15.57,0,0,1-4.58,11.07l-27.7,27.7a15.66,15.66,0,1,1-22.15-22.15l17.19-17.2L260.94,26.75A15.67,15.67,0,0,1,283.09,4.58l27.7,27.7a15.49,15.49,0,0,1,4.56,11.48,1,1,0,0,1,0,.35A2.75,2.75,0,0,1,315.37,44.52Z"/><path class="cls-1" d="M175.6,88A14.81,14.81,0,0,1,165,83.63a15,15,0,0,1,0-21.14L219.53,8a15,15,0,1,1,21.15,21.14L186.17,83.63A14.84,14.84,0,0,1,175.6,88Z"/><path class="cls-1" d="M230.1,3.73a14.81,14.81,0,0,1,10.49,4.34h0a14.83,14.83,0,0,1,0,21l-54.51,54.5a14.81,14.81,0,0,1-21,0h0a14.82,14.82,0,0,1,0-21L219.62,8.07A14.81,14.81,0,0,1,230.1,3.73m0-.25a15,15,0,0,0-10.65,4.41L164.94,62.4a15.08,15.08,0,1,0,21.32,21.32l54.5-54.51A15.07,15.07,0,0,0,230.1,3.48Z"/><path class="cls-1" d="M230.21,88.39a15.33,15.33,0,1,1,15.33-15.33A15.34,15.34,0,0,1,230.21,88.39Z"/><path class="cls-1" d="M230.21,58.24A14.82,14.82,0,0,1,245,73.06h0a14.83,14.83,0,0,1-14.83,14.83h0a14.83,14.83,0,0,1-14.82-14.83h0a14.82,14.82,0,0,1,14.82-14.82h0m0-1A15.82,15.82,0,1,0,246,73.06a15.73,15.73,0,0,0-15.83-15.82Z"/><path class="cls-1" d="M140,88a14.81,14.81,0,0,1-10.57-4.38L74.9,29.12A14.95,14.95,0,1,1,96,8l54.51,54.51A15,15,0,0,1,140,88Z"/><path class="cls-1" d="M85.47,3.73A14.79,14.79,0,0,1,96,8.07l54.51,54.51a14.82,14.82,0,0,1,0,21h0a14.81,14.81,0,0,1-21,0L75,29a14.83,14.83,0,0,1,0-21h0A14.77,14.77,0,0,1,85.47,3.73m0-.25A15.07,15.07,0,0,0,74.81,29.21l54.51,54.51a15.06,15.06,0,0,0,21.32,0,15.11,15.11,0,0,0,0-21.32L96.13,7.89A15,15,0,0,0,85.47,3.48Z"/><path class="cls-1" d="M85.39,88.39a15.33,15.33,0,1,1,15.33-15.33A15.34,15.34,0,0,1,85.39,88.39Z"/><path class="cls-1" d="M85.39,58.24a14.82,14.82,0,0,1,14.83,14.82h0A14.83,14.83,0,0,1,85.39,87.89h0A14.83,14.83,0,0,1,70.57,73.06h0A14.82,14.82,0,0,1,85.39,58.24h0m0-1a15.83,15.83,0,1,0,15.83,15.82A15.73,15.73,0,0,0,85.39,57.24Z"/><path class="cls-1" d="M54.44,61.14A15.67,15.67,0,1,1,32.29,83.3L4.59,55.6A15.54,15.54,0,0,1,0,44.11a1.93,1.93,0,0,1,0-.34,2.82,2.82,0,0,1,0-.41A15.7,15.7,0,0,1,4.59,32.28l27.7-27.7A15.67,15.67,0,0,1,54.44,26.75L37.24,43.94Z"/></g></g></svg>            
             </router-link>
         </div>
         <the-nav/>
-        <switch-bar/>
+        <div class="switch">
+            <LangButton/>
+            <SwitchModeButton/>
+        </div>
     </header>
 </template>
 
 <style scoped>
 header {
     margin: 0 auto;
-    padding: .3rem 0;
+    padding: .5rem 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 1320px;
+    width: 100%;
 }
-#logo img{
-    max-width: 6.2rem;
-    transition: transform .35s;
-}
-
-#logo img:hover {
-    transform: translateY(.8rem) scale(1.1) rotate(360deg);
+#logo svg {
+    width: 8rem;
+    fill: var(--main-color);
+    transition: all .35s;
 }
 
+#logo svg:hover {
+    fill: var(--primary-color);
+    transform: translateY(-.2rem);
+    opacity: .7;
+}
+
+.switch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: .5rem;
+}
 
 </style>

@@ -23,10 +23,10 @@ button {
     position: relative;
     outline: none;
     cursor: pointer;
-    padding: 1rem;
+    padding: 1.2rem;
     font-family: 'Cascadia Code', sans-serif;
-    font-weight: 500;
-    font-size: 1.4rem;
+    font-weight: 600;
+    font-size: 1.5rem;
     transition: all .35s;
     border: 3px solid transparent;
 }

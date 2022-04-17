@@ -8,14 +8,13 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
 <template>
     <section class="about">
         <main class="main-about">
-            <h5># About me</h5>
+            <h5>#About_me</h5>
             <h1>Who I am?</h1>
         </main>
         <main class="about-details">
             <div class="photo-profile">
                 <div class="photo">
-                    <img src="@/assets/Photo-profile.png" alt="">
-                    <div class="square"></div>
+                    <img src="@/assets/Photo-profile.png" alt="">               
                 </div>
                 <SocialButton direction="row" class="social"></SocialButton>
             </div>
@@ -181,7 +180,7 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
 
 <style scoped>
 .about {
-    width: 1320px;
+    width: 100%;
     margin: 0 auto;
     flex-direction: column;
     display: flex;
@@ -190,15 +189,15 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
 .main-about h5 {
     font-family: 'Cascadia Code', sans-serif;
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: #2b9ccc;
     margin-top: 2rem;
     margin-bottom: 0;
 }
 
 .main-about h1 {
-    margin: 2.5rem 0 0;
-    font-size: 3.5rem;
+    margin: 3rem 0 0;
+    font-size: 3.8rem;
     font-weight: 700;
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     line-height: 0;
@@ -209,8 +208,6 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
 .about-details {
     display: flex;
     flex-direction: row-reverse;
-    
-
 }
 
 .bio {
@@ -228,9 +225,9 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
 
 .description p {
     color: var(--secondary-color);
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.7;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.6;
     margin: 0;
     overflow: hidden;
     display: block;
@@ -244,7 +241,7 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
     font-weight: 500;
 }
 .description p span {
-    font-weight: 600;
+    font-weight: 700;
 }
 .description p span a {
     text-decoration: none;
@@ -257,10 +254,12 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
     content: '';
     width: 0;
     position: absolute;
-    height: 4px;
-    top: 90%;
+    height: .8rem;
+    top: 50%;
     transition: all 0.35s ease;
     right: 0;
+    z-index: -1;
+    opacity: .7;
     background-color: var(--main-color);
 }
 .description p span a:hover {
@@ -276,49 +275,36 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
     margin-top: 2rem;
     margin-bottom: 0;
     display: flex;
-    width: 45%;
+    width: 50%;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .photo-profile {
-    margin: 2rem 0 0;
+    margin: 3rem 0 0;
     display: flex;
     flex-direction: column;
-    transition: all .35s;
     align-items: center;
+    padding: 0;
 }
 .photo {
-    position: relative;
     width: 100%;
-    padding: 0;
     margin: 0;
+    transition: all .35s;
+    position: relative;
 }
 .photo img {
-    padding-top: 0.8rem;
-    padding-bottom: 0;
+    padding: 1rem 0 0;
     background-color: var(--main-color);
     width: 100%;
     transition: all .35s;
     cursor: pointer;
-    border: 3px solid transparent;
-}
-
-.photo img:hover {
-    background-color: var(--primary-color);
-    border-color: var(--main-color);
-}
-
-.photo .square{
-    position: absolute;
     border: 3px solid var(--primary-color);
-    width: 100%;
-    height: 95%;
-    top: 0;
-    left: 0;
-    transform: translate(-0.8rem, .95rem);
-    transition: all .35s;
-    z-index: -1;
+}
+.photo img:hover {
+    background-color: var(--background);
+    border-color: var(--main-color);
+    transform: translateY(-.8rem);
 }
 
 .photo:hover .square{
@@ -330,12 +316,12 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
     margin: 2.5rem 0 0;
 }
 .skills {
-    margin: 2.5rem auto 3rem;
+    margin: 3rem auto;
     width: 1320px;
 }
 .skills h1 {
-    margin: 2.5rem 0 0;
-    font-size: 3.5rem;
+    margin: 3rem 0 0;
+    font-size: 3.8rem;
     font-weight: 700;
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     line-height: 0;
@@ -343,7 +329,7 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
 }
 
 .techs {
-    margin-top: 4rem;
+    margin-top: 5rem;
     display: grid;
     grid-template-columns: repeat(5, 18%);
     gap: 1.5rem;
@@ -363,6 +349,7 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
     flex-direction: column;
     align-items: center;
     position: relative;
+    transition: all .35s;
 }
 .tooltip svg {
     fill: var(--secondary-color);
@@ -375,13 +362,13 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
 
 .tooltip:hover svg{
     fill: var(--main-color);
-    transform: translateY(-0.15rem);
+    transform: translateY(-0.2rem);
 }
 .skill p {
-    color: #d4ecf6;
+    color: var(--primary-color);
     font-family: 'Cascadia Code', sans-serif;
-    font-weight: 500;
-    font-size: 1.45rem;
+    font-weight: 600;
+    font-size: 1.5rem;
     margin-top: 1.2rem;
 }
 
@@ -402,10 +389,13 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: none;
+    visibility: hidden;
+    width: 0;
+    display: flex;
 }
 
 .tooltip li {
+    display: none;
     margin-left: 1.4rem;
     margin-top: .8rem;
     align-self: start;
@@ -427,14 +417,18 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
     border-bottom: 15px solid var(--primary-color);
     top: -1rem;
     transition: all .25s;
+    
 }
 
 .tooltip:hover .tooltip-detail {
     bottom: auto;
     width: 21rem;
-    display: flex;
+    
+    visibility: visible;
 }
-
+.tooltip:hover .tooltip-detail li {
+    display: block;
+}
 </style>
 
 

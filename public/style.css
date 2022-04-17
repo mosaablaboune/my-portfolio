@@ -12,6 +12,11 @@
     --secondary-color: #a1b4c4;
 }
   
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
 
 body {
   margin: 0;
@@ -24,6 +29,10 @@ body {
   background-position: center center;
   background-attachment: fixed;
   background-size: 85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 /* Works on Firefox */
 * {

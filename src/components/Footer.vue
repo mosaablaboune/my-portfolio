@@ -6,15 +6,15 @@
 
 <style scoped>
 footer {
-    width: 1320px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 1rem auto 0;
 }
 
 
 p {
     font-family: 'Cascadia Code', sans-serif;
-    font-weight: 400;
-    font-size: .85rem;
+    font-weight: 500;
+    font-size: 1rem;
     color: var(--secondary-color);
     text-align: left;
     width: 100%;
@@ -30,8 +30,10 @@ a::after{
     content: '';
     width: 0;
     position: absolute;
-    height: 3px;
-    top: 90%;
+    height: .8rem;
+    top: 50%;
+    z-index: -1;
+    opacity: .7;
     transition: all 0.35s ease;
     right: 0;
     background-color: var(--main-color);

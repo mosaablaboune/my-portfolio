@@ -1,7 +1,7 @@
 <template>
   <section class="home">
       <main class="info">
-        <h5 id="welcome"># Hi!, I'm</h5>
+        <h5 id="welcome">#Hi!, my name is</h5>
         <h1 id="name">Mosaab Laboune</h1>
         <h1 id="build">I build modern websites.</h1>
         <p class="description">
@@ -21,7 +21,7 @@
             </router-link>
         </div>
       </main>
-        <SocialButton :direction="column"></SocialButton>
+    <SocialButton :direction="column"></SocialButton>
   </section>
 </template>
 
@@ -34,8 +34,8 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
 
 <style scoped>
 .home {
-    width: 1320px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0 auto 3rem;
     flex-direction: row;
     display: flex;
     align-items: center;
@@ -51,13 +51,13 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
     font-weight: 600;
     font-size: 1.8rem;
     color: var(--main-color);
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-bottom: 0;
 }
 
 .info h1 {
     margin: 0;
-    font-size: 5.4rem;
+    font-size: 5.5rem;
     font-weight: 700;
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     line-height: 0;
@@ -65,39 +65,50 @@ import SocialButton from '@/components/Buttons/SocialButton.vue';
 
 #name {
     color: var(--primary-color);
-    margin-top: 3.5rem;
-    margin-left: -6px;
+    margin-top: 4rem;
+    margin-left: -5px;
 }
 
 #build {
     position: relative;
     color: var(--secondary-color);
-    margin-top: 6rem;
+    margin-top: 7rem;
 }
 
 .description {
-    margin-top: 3.8rem;
+    margin-top: 4rem;
     margin-bottom: 0;
-    width: 72%;
+    width: 75%;
     color: var(--secondary-color);
-    font-size: 1.95rem;
+    font-size: 2rem;
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.6;
     
 }
 
 .description span {
     font-weight: 600;
     position: relative;
-    color: var(--main-color);
+    color: var(--primary-color);
+}
+
+.description span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1rem;
+    top: 60%;
+    right: 0;
+    z-index: -1;
+    opacity: .7;
+    background-color: var(--main-color);
 }
 
 
 .cta {
-    margin-top: 2.5rem;
-    margin-bottom: 3rem;
+    margin: 2rem 0 0;
     display: flex;
-    width: 35%;
+    width: 40%;
     flex-direction: row;
     justify-content: space-between;
 }

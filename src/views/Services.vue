@@ -1,7 +1,7 @@
 <template>
     <section class="services">
         <main>
-            <h5># My Services</h5>
+            <h5>#My_Services</h5>
             <h1>What I can do for you?</h1>
             <div class="services-cards">
                 <div class="card">
@@ -139,7 +139,7 @@
             </div>
         </main>
         <p class="info">
-            what are you waiting for, <a href="mailto:mosaab.laboune@gmail.com" target="_blank">let's work together on something great <span>-></span></a>
+            what are you waiting for, <a href="mailto:mosaab.laboune@gmail.com" target="_blank">let's work together on something great</a>
         </p>
         
     </section>
@@ -148,8 +148,8 @@
 
 <style scoped>
 .services {
-    width: 1320px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0 auto 3rem;
     flex-direction: column;
     display: flex;
     margin-bottom: 2rem;
@@ -165,19 +165,19 @@ main {
 h5 {
     font-family: 'Cascadia Code', sans-serif;
     font-weight: 600;
-    font-size: 1.6rem;
-    color: #2b9ccc;
+    font-size: 1.8rem;
+    color: var(--main-color);
     margin-top: 2rem;
     margin-bottom: 0;
 }
 
 h1 {
-    margin: 2.5rem 0 0;
-    font-size: 3.5rem;
+    margin: 3rem 0 0;
+    font-size: 3.8rem;
     font-weight: 700;
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     line-height: 0;
-    color: #d4ecf6;
+    color: var(--primary-color);
 }
 
 
@@ -185,7 +185,7 @@ h1 {
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 1.2rem;
+    column-gap: 2rem;
 }
 
 .card {
@@ -217,7 +217,7 @@ h1 {
     width: 99%;
     left: 0;
     right: auto;
-    opacity: 1;
+    opacity: .5;
 }
 
 .card svg {
@@ -238,10 +238,11 @@ h1 {
 }
 
 .card p {
-    margin: .8rem 0 0;
+    margin: 1rem 0 0;
     color: var(--secondary-color);
     font-size: 1.2rem;
     z-index: 1;
+    font-weight: 500;
     transition: color .35s;
 }
 
@@ -256,24 +257,6 @@ h1 {
     margin: 2.8rem 0 1.95rem;
 }
 
-.info a span {
-    font-family: 'Cascadia Code', sans-serif;
-    display: inline-block;
-    visibility: hidden;
-    transition: all .35s;
-    color: #d4ecf6;
-    animation: speed 1s ease .5s infinite normal forwards;
-}
-
-@keyframes speed {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(.8rem) rotate(180deg);
-    }
-}
-
 .info a {
     color: #2b9ccc;
     position: relative;
@@ -281,18 +264,17 @@ h1 {
     text-decoration: none;
 }
 
-.info a:hover span {
-    visibility: visible;
-}
 
 .info a::after{
     content: '';
     width: 0;
     position: absolute;
-    height: 5px;
-    top: 80%;
+    height: 1rem;
+    top: 60%;
     transition: all 0.35s ease;
     right: 0;
+    opacity: .7;
+    z-index: -1;
     background-color: #2b9ccc;
 }
 .info a:hover {

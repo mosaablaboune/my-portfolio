@@ -52,7 +52,7 @@ function sendEmail(e) {
 
 .form {
     width: 100%;
-    margin: 3rem 0 0;
+    margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;

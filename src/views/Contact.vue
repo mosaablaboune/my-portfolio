@@ -7,7 +7,7 @@ import Form from '@/components/Form/Form.vue';
 <template>
     <section class="contact">
         <main>
-            <h5># Contact me</h5>
+            <h5>#Contact_me</h5>
             <h1>Get In Touch</h1>
         </main>
 
@@ -17,7 +17,7 @@ import Form from '@/components/Form/Form.vue';
             <Form/>
         </main>
         <main class="cntact-info">
-            <p class="cta">It's nice to work on your project and turn it on live. <span>let's work togethere <span class="plus">-></span></span></p>
+            <p class="cta">It's nice to work on your project and turn it on live. <span>let's work togethere</span></p>
             <div class="info">
                 <div class="detail">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
@@ -32,7 +32,7 @@ import Form from '@/components/Form/Form.vue';
                     <p><a href="tel:+213660438114">+213-660-43-81-14</a></p>
                 </div>
             </div>
-            <p>Or, you can find me here:</p>
+            <p class="social-link">Or, you can find me here:</p>
             <SocialButton direction="row" class="primary"/>
         </main>
     </section>
@@ -40,8 +40,8 @@ import Form from '@/components/Form/Form.vue';
 
 <style scoped>
 .contact {
-    width: 1320px;
-    margin: 0 auto .1rem;
+    width: 100%;
+    margin: 0 auto;
     flex-direction: column;
     display: flex;
 }
@@ -49,77 +49,81 @@ import Form from '@/components/Form/Form.vue';
 .contact h5 {
     font-family: 'Cascadia Code', sans-serif;
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: #2b9ccc;
     margin-top: 2rem;
     margin-bottom: 0;
 }
 
 .contact h1 {
-    margin: 2.5rem 0 0;
-    font-size: 3.5rem;
+    margin: 3rem 0 0;
+    font-size: 3.8rem;
     font-weight: 700;
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     line-height: 0;
     color: #d4ecf6;
 }
 
-/* Contact Form */
-.contact-form {
-    margin: 0;
-    padding: 0;
-}
+
 
 .get-in-touch {
     display: flex;
     flex-direction: row;
-    width: 1320px;
-    margin: 0 auto 2rem;
+    width: 100%;
+    margin: 4rem auto 0;
     align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+/* Contact Form */
+.contact-form {
+    
+    padding: 0;
 }
 
 /* Contact Info */
 .cntact-info {
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 10rem;
+   
     padding: 0;
+    width: 40%;
 }
 .cntact-info p{
     color: var(--secondary-color);
-    font-size: 1.95rem;
+    font-size: 1.8rem;
     font-weight: 500;
-    margin: 0 0 1rem;
 }
-
+.cta {
+    margin: 0 0 2rem;
+}
+.social-link {
+    margin: 2rem 0 1rem;
+}
 .cta span{
     color: var(--primary-color);
     position: relative;
     font-weight: 600;
 }
 
-.plus {
-    font-family: 'Cascadia Code', sans-serif;
-    display: inline-block;
-    font-weight: 700;
-    animation: speed 1s ease .5s infinite normal forwards;
+.cta span::after{
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 1rem;
+    top: 60%;
+    transition: all 0.35s ease;
+    right: 0;
+    z-index: -1;
+    opacity: .7;
+    background-color: var(--main-color);
 }
 
-@keyframes speed {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(.8rem) rotate(180deg);
-    }
-}
-.plus::after {
-    display: none;
-}
 
 
 .info {
-    margin: 2.2rem 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
 }
@@ -133,13 +137,13 @@ import Form from '@/components/Form/Form.vue';
 
 .detail svg {
     color: var(--primary-color);
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.2rem;
+    height: 2.2rem;
 }
 
 .detail p {
     margin: 0 0 0 1.2rem;
-    font-size: 1.75rem;
+    font-size: 1.6rem;
 }
 
 .detail p a {
@@ -153,10 +157,12 @@ import Form from '@/components/Form/Form.vue';
     content: '';
     width: 0;
     position: absolute;
-    height: 5px;
-    top: 90%;
+    height: 1rem;
+    top: 50%;
     transition: all 0.35s ease;
     right: 0;
+    z-index: -1;
+    opacity: .7;
     background-color: var(--main-color);
 }
 .detail p a:hover::after {
