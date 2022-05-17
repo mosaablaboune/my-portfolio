@@ -37,16 +37,16 @@ const lanche = ref(true)
 
 
 #app {
-  margin: 0 auto;
   padding: 0;
   font-family: ibm-plex-arabic, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-between;  
+  align-items: center;
   /*animation: slide 6s linear infinite alternate;*/
   position: relative;
   height: 100%;
-  width: 1320px;
+  margin: 0 .5rem;
 }
 
 .mantain {
@@ -54,8 +54,8 @@ const lanche = ref(true)
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .mantain span {
@@ -92,7 +92,7 @@ const lanche = ref(true)
   color: #ffffff;
   font-size: 3rem;
   font-weight: 600;
-  margin: 0 0 1rem;
+  margin: 0 0 5px;
 }
 
 
@@ -105,6 +105,12 @@ const lanche = ref(true)
   }
 }*/
 
+
+@media only screen and (max-width: 600px) {  
+  .mantain h1::after {
+    width: 0;
+  }
+}
 
 </style>
 
