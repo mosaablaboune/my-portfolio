@@ -107,6 +107,9 @@ const lanche = ref(true)
 
 
 @media only screen and (max-width: 600px) {  
+  .mantain {
+    margin-top: 3rem;
+  }
   .mantain h1 {
     font-size: 4rem;
     line-height: 1.2;
