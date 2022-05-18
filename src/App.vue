@@ -107,9 +107,16 @@ const lanche = ref(true)
 
 
 @media only screen and (max-width: 600px) {  
+  .mantain h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
   .mantain h1::after {
     width: 0;
   }
+  .socials {
+    margin: 0 0 10px;
+  } 
 }
 
 </style>
